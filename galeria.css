@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #334ebf;
+    font-family: Arial, sans-serif;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Header com os botões */
+header {
+    background-color: #161174;
+    padding: 60px 0;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.botao {
+    background-color: #cdd6ff;
+    color: #000;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+    transition: background-color 0.0s ease;
+}
+
+.botao:hover {
+    background-color: #6e7ac9;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+/* Título principal */
+.titulo {
+    text-align: center;
+    margin-top: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.titulo h1 {
+    font-family: 'Candara', serif;
+    font-size: 5.0em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.decoracao {
+    font-size: 2.5em;
+    color: white;
+}
+
+/* Galeria de relatos */
+.galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.relato {
+    width: 80%;
+    max-width: 700px;
+    border: 3px dashed #add8e6;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.relato img {
+    width: 100%;
+    display: block;
+}
+
+/* Rodapé */
+footer {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+    position: relative;
+    z-index: 1;
+}
