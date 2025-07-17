@@ -62,11 +62,6 @@ header {
     background-color: #7a87dd;
 }
 
-.logo img {
-    height: 60px;
-    width: auto;
-}
-
 /* Conteúdo principal */
 main .conteudo {
     text-align: center;
