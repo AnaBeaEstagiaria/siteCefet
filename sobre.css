@@ -5,19 +5,35 @@
 }
 
 body {
-    background-color: #334ebf;
     font-family: Arial, sans-serif;
-    color: white;
+    background-color: #334ebf; /* fundo azul de base */
     min-height: 100vh;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-x: hidden;
 }
 
-/* Header com os botões */
+/* Camada da imagem por cima do azul */
+body::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("imagens/cefetPredio.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4; /* imagem mais suave */
+    z-index: 0;
+}
+
+/* Cabeçalho com menu */
 header {
     background-color: #161174;
     padding: 60px 0;
+    position: relative;
+    z-index: 1;
 }
 
 .menu {
@@ -37,11 +53,79 @@ header {
     border-radius: 20px;
     font-weight: bold;
     border: 2px solid #ffffff;
-    transition: background-color .0s ease;
+    transition: background-color 0.3s ease;
 }
 
 .botao:hover {
-    background-color: #6e7ac9;
+    background-color: #7a87dd;
+}
+
+
+/* Seção principal */
+.conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    flex-grow: 1;
+    background: url('fundo.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Balão de fala */
+.balao {
+    position: relative;
+    background: linear-gradient(to right, #0d0d0d, #3e33c5);
+    border-radius: 20px;
+    padding: 40px 30px;
+    max-width: 700px;
+    color: white;
+    font-size: 1.1rem;
+    box-shadow: 0 0 10px #000;
+    z-index: 2;
+}
+
+/* Setinha preta */
+.balao::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 50px;
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-right: 30px solid #000;
+}
+
+/* Título com bordas arredondadas */
+.titulo {
+    background-color: #bdbdf5;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 10px 20px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 3px dashed white;
+}
+
+/* Bolinhas */
+.bolinhas {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.bolinhas span {
+    width: 12px;
+    height: 12px;
+    background-color: #00ffcc;
+    border-radius: 50%;
 }
 
 /* Rodapé */
